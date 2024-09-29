@@ -2,6 +2,13 @@
     {
         "id": 1,
         "name": "test",
-        "shortname": "test"
+        "shortname": "test",
+        "rarity": "common"
+    },
+    {
+        "id": 2,
+        "name": "test2",
+        "shortname": "test2",
+        "rarity": "rare"
     }
 ]

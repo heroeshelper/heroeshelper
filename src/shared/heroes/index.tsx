@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext } from "react";
 import { Hero } from "./types";
 import HeroesProvider from "./HeroesProvider";

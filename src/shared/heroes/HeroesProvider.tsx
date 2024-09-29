@@ -8,7 +8,7 @@ type Props = {
 };
 
 const HeroesProvider = ({ children }: Props) => {
-  const heroes: Hero[] = unitData;
+  const heroes = unitData as Hero[];
 
   return (
     <HeroesContext.Provider value={heroes}>{children}</HeroesContext.Provider>
