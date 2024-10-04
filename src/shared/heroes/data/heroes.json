@@ -2,13 +2,25 @@
     {
         "id": 1,
         "name": "test",
-        "shortname": "test",
+        "shortname": "caesar",
         "rarity": "common"
     },
     {
         "id": 2,
         "name": "test2",
-        "shortname": "test2",
+        "shortname": "napoleon",
+        "rarity": "legendary"
+    },
+    {
+        "id": 3,
+        "name": "test",
+        "shortname": "charlemagne",
+        "rarity": "epic"
+    },
+    {
+        "id": 4,
+        "name": "test2",
+        "shortname": "cleopatra",
         "rarity": "rare"
     }
 ]
