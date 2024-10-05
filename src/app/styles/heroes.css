@@ -2,7 +2,7 @@
   width: 100px;
   height: auto;
 
-  img {
+  > img {
     object-fit: contain;
   }
 }

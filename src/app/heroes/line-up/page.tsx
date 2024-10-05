@@ -1,6 +1,6 @@
 "use client";
-import { useHeroes } from "@/shared/heroes";
-import HeroCard from "@/shared/heroes/HeroCard";
+import { useHeroes } from "@shared/heroes";
+import HeroCard from "@shared/heroes/HeroCard";
 
 const HeroesLineup = () => {
   const heroes = useHeroes();
