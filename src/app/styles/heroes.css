@@ -48,11 +48,11 @@
     border-color: var(--hero-rare);
   }
 
-  &.common {
+  &.uncommon {
     background-image: linear-gradient(
       to top,
-      var(--hero-common),
-      var(--hero-common-complementary)
+      var(--hero-uncommon),
+      var(--hero-uncommon-complementary)
     );
     border-color: var(--hero-common);
   }
