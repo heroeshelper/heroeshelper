@@ -4,6 +4,7 @@
   border: 2px solid #7d540d;
   border-radius: 10px;
   position: relative;
+  display: flex;
 
   &::after {
     box-shadow: inset 0px 0px 2px black;
@@ -19,6 +20,7 @@
   > img {
     object-fit: contain;
     border-radius: 8px;
+    align-self: flex-end;
   }
 
   &.legendary {
@@ -56,4 +58,8 @@
     );
     border-color: var(--hero-common);
   }
+}
+
+.hero-row {
+  width: min(860px, 90%);
 }
