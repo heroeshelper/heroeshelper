@@ -14,6 +14,7 @@ const config: Config = {
       },
     },
   },
+  safelist: [{ pattern: /^cursor-/ }],
   plugins: [],
 };
 export default config;

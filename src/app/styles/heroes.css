@@ -21,6 +21,7 @@
     object-fit: contain;
     border-radius: 8px;
     align-self: flex-end;
+    max-height: 100%;
   }
 
   &.legendary {
