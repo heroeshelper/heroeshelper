@@ -5,23 +5,29 @@ import { Hero, HeroClass, HeroColor, HeroType, Rarity } from "../types";
 const heroes = unitData as Hero[];
 
 describe.each(heroes)("Hero data", (hero) => {
-  test(`${hero.name} has valid rarity`, () => {
+  test(`${hero.name} has a valid rarity`, () => {
     expect(Object.values(Rarity)).toContain(hero.rarity);
   });
 
-  test(`${hero.name} has valid class`, () => {
+  test(`${hero.name} has a valid class`, () => {
     expect(Object.values(HeroClass)).toContain(hero.class);
   });
 
-  test(`${hero.name} has valid type`, () => {
+  test(`${hero.name} has a valid type`, () => {
     expect(Object.values(HeroType)).toContain(hero.type);
   });
 
-  test(`${hero.name} has valid color`, () => {
+  test(`${hero.name} has a valid color`, () => {
     expect(Object.values(HeroColor)).toContain(hero.color);
   });
 
   test(`${hero.name} has a unique id`, () => {
     expect(heroes.filter((x) => x.id === hero.id).length).toEqual(1);
+  });
+
+  test(`${hero.name} has a unique shortname`, () => {
+    expect(heroes.filter((x) => x.shortname === hero.shortname).length).toEqual(
+      1
+    );
   });
 });

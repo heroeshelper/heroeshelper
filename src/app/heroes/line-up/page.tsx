@@ -13,11 +13,11 @@ const HeroesLineup = () => {
 
   return (
     <div className="flex flex-col items-center gap-2 mt-4 mb-8">
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-8">
         <HeroCard />
         <HeroCard />
       </div>
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-8">
         <HeroCard />
         <HeroCard />
         <HeroCard />
