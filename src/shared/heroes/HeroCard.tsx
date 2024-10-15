@@ -16,7 +16,7 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
   return (
     <div
       className={`herocard ${hero && hero.rarity} ${
-        !disabled && onClick && "cursor-pointer"
+        !disabled && hero && onClick && "cursor-pointer"
       } ${disabled && "disabled"}`}
       onClick={onCardClick}
     >
