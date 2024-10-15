@@ -5,9 +5,10 @@ import Image from "next/image";
 type Props = {
   hero: Hero | null;
   onClick?: (shortname: string) => void;
+  disabled?: boolean;
 };
 
-const HeroCard = ({ hero, onClick }: Props) => {
+const HeroCard = ({ hero, onClick, disabled }: Props) => {
   const onCardClick = useCallback(() => {
     hero && onClick?.(hero.shortname);
   }, [hero, onClick]);
@@ -15,8 +16,8 @@ const HeroCard = ({ hero, onClick }: Props) => {
   return (
     <div
       className={`herocard ${hero && hero.rarity} ${
-        onClick && "cursor-pointer"
-      }`}
+        !disabled && onClick && "cursor-pointer"
+      } ${disabled && "disabled"}`}
       onClick={onCardClick}
     >
       {hero && (

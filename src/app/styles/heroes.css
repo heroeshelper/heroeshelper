@@ -59,6 +59,10 @@
     );
     border-color: var(--hero-common);
   }
+
+  &.disabled {
+    filter: grayscale(1);
+  }
 }
 
 .hero-row {
