@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { Hero } from "./types";
-import Image from "../components/Image";
+import AssetImage from "../components/AssetImage";
 
 type Props = {
     hero: Hero | null;
@@ -20,9 +20,7 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
             }`}
             onClick={onCardClick}
         >
-            {hero && (
-                <Image src={`/assets/heroes/${hero.shortname}.png`} alt={hero.shortname} width={216} height={260} />
-            )}
+            {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.shortname} width={216} height={260} />}
         </div>
     );
 };
