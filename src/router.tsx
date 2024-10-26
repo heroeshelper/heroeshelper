@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Home from "./pages/home/page";
+import Home from "./pages/home";
 import NotFound from "./pages/error/NotFound";
-import HeroesLineup from "./pages/heroes/line-up/page";
+import HeroesLineup from "./pages/heroes/line-up";
 
 const router = createBrowserRouter([
     {
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
         element: <Home />,
     },
     {
-        path: "/heroes/line-up",
+        path: "/heroes/line-up/:saveString?",
         element: <HeroesLineup />,
     },
     {
