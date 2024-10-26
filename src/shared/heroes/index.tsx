@@ -6,7 +6,7 @@ import HeroesProvider from "./HeroesProvider";
 export const HeroesContext = createContext<Hero[]>([]);
 
 const useHeroes = () => {
-  return useContext(HeroesContext);
+    return useContext(HeroesContext);
 };
 
 export { useHeroes, HeroesProvider };
