@@ -1,0 +1,686 @@
+[
+    {
+        "id": 1,
+        "name": "Ramses II",
+        "shortname": "ramses",
+        "rarity": "legendary",
+        "class": "greatLeader",
+        "color": "blue",
+        "type": "cavalry"
+    },
+    {
+        "id": 2,
+        "name": "Achilles",
+        "shortname": "achilles",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 3,
+        "name": "Queen Elizabeth I",
+        "shortname": "elizabeth",
+        "rarity": "legendary",
+        "class": "greatLeader",
+        "color": "red",
+        "type": "cavalry"
+    },
+    {
+        "id": 4,
+        "name": "Hua Mulan",
+        "shortname": "mulan",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 5,
+        "name": "Leonardo Da Vinci",
+        "shortname": "davinci",
+        "rarity": "legendary",
+        "class": "genius",
+        "color": "red",
+        "type": "siege"
+    },
+    {
+        "id": 6,
+        "name": "Marie Curie",
+        "shortname": "mariecurie",
+        "rarity": "legendary",
+        "class": "genius",
+        "color": "purple",
+        "type": "siege"
+    },
+    {
+        "id": 7,
+        "name": "Hercules",
+        "shortname": "hercules",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 8,
+        "name": "Sir Lancelot",
+        "shortname": "lancelot",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "yellow",
+        "type": "infantry"
+    },
+    {
+        "id": 9,
+        "name": "William Wallace",
+        "shortname": "braveheart",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "blue",
+        "type": "infantry"
+    },
+    {
+        "id": 10,
+        "name": "Abraham Lincoln",
+        "shortname": "lincoln",
+        "rarity": "legendary",
+        "class": "greatLeader",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 11,
+        "name": "Sun Tzu",
+        "shortname": "suntzu",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "green",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 12,
+        "name": "Cleopatra",
+        "shortname": "cleopatra",
+        "rarity": "legendary",
+        "class": "manipulator",
+        "color": "yellow",
+        "type": "ranged"
+    },
+    {
+        "id": 13,
+        "name": "Julius Caesar",
+        "shortname": "caesar",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "red",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 14,
+        "name": "George Washington",
+        "shortname": "washington",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "yellow",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 15,
+        "name": "Menes",
+        "shortname": "menes",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "red",
+        "type": "siege"
+    },
+    {
+        "id": 16,
+        "name": "Benjamin Franklin",
+        "shortname": "benjaminfranklin",
+        "rarity": "legendary",
+        "class": "manipulator",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 17,
+        "name": "Medusa",
+        "shortname": "medusa",
+        "rarity": "legendary",
+        "class": "manipulator",
+        "color": "green",
+        "type": "ranged"
+    },
+    {
+        "id": 18,
+        "name": "D'artagnan",
+        "shortname": "dartagnan",
+        "rarity": "epic",
+        "class": "champion",
+        "color": "blue",
+        "type": "infantry"
+    },
+    {
+        "id": 19,
+        "name": "Ludwig van Beethoven",
+        "shortname": "beethoven",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "yellow",
+        "type": "siege"
+    },
+    {
+        "id": 20,
+        "name": "King Minos",
+        "shortname": "kingminos",
+        "rarity": "epic",
+        "class": "commander",
+        "color": "yellow",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 21,
+        "name": "Confucius",
+        "shortname": "confucius",
+        "rarity": "epic",
+        "class": "manipulator",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 22,
+        "name": "Jane Austen",
+        "shortname": "janeausten",
+        "rarity": "epic",
+        "class": "manipulator",
+        "color": "yellow",
+        "type": "ranged"
+    },
+    {
+        "id": 23,
+        "name": "Qin Shi Huang",
+        "shortname": "qinshi",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "yellow",
+        "type": "siege"
+    },
+    {
+        "id": 24,
+        "name": "Tomoe Gozen",
+        "shortname": "tomoegozen",
+        "rarity": "epic",
+        "class": "champion",
+        "color": "yellow",
+        "type": "infantry"
+    },
+    {
+        "id": 25,
+        "name": "Napoleon Bonaparte",
+        "shortname": "napoleon",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "blue",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 26,
+        "name": "Robin Hood",
+        "shortname": "robinhood",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "green",
+        "type": "ranged"
+    },
+    {
+        "id": 27,
+        "name": "Otto von Bismarck",
+        "shortname": "bismarck",
+        "rarity": "rare",
+        "class": "commander",
+        "color": "purple",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 28,
+        "name": "Ashoka the Great",
+        "shortname": "ashoka",
+        "rarity": "rare",
+        "class": "greatLeader",
+        "color": "red",
+        "type": "cavalry"
+    },
+    {
+        "id": 29,
+        "name": "Hasan Pasha",
+        "shortname": "hasanpasha",
+        "rarity": "uncommon",
+        "class": "commander",
+        "color": "green",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 30,
+        "name": "Charlemagne",
+        "shortname": "charlemagne",
+        "rarity": "epic",
+        "class": "commander",
+        "color": "yellow",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 31,
+        "name": "Triboulet",
+        "shortname": "triboulet",
+        "rarity": "uncommon",
+        "class": "genius",
+        "color": "purple",
+        "type": "siege"
+    },
+    {
+        "id": 32,
+        "name": "Vincent van Gogh",
+        "shortname": "vangogh",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "red",
+        "type": "siege"
+    },
+    {
+        "id": 33,
+        "name": "Spartacus",
+        "shortname": "spartacus",
+        "rarity": "epic",
+        "class": "champion",
+        "color": "purple",
+        "type": "infantry"
+    },
+    {
+        "id": 34,
+        "name": "Yoshino Dayu",
+        "shortname": "yoshino",
+        "rarity": "uncommon",
+        "class": "manipulator",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 35,
+        "name": "Inanna",
+        "shortname": "inanna",
+        "rarity": "rare",
+        "class": "champion",
+        "color": "yellow",
+        "type": "infantry"
+    },
+    {
+        "id": 36,
+        "name": "Ada Lovelace",
+        "shortname": "adalovelace",
+        "rarity": "rare",
+        "class": "genius",
+        "color": "yellow",
+        "type": "siege"
+    },
+    {
+        "id": 37,
+        "name": "Mansa Musa",
+        "shortname": "mansamusa",
+        "rarity": "rare",
+        "class": "greatLeader",
+        "color": "purple",
+        "type": "cavalry"
+    },
+    {
+        "id": 38,
+        "name": "Karl Marx",
+        "shortname": "karlmarx",
+        "rarity": "rare",
+        "class": "manipulator",
+        "color": "red",
+        "type": "ranged"
+    },
+    {
+        "id": 39,
+        "name": "Itzmnaaj Bahlam III",
+        "shortname": "itzamnaaj",
+        "rarity": "uncommon",
+        "class": "genius",
+        "color": "blue",
+        "type": "siege"
+    },
+    {
+        "id": 40,
+        "name": "Kondo Isami",
+        "shortname": "kondoisami",
+        "rarity": "uncommon",
+        "class": "commander",
+        "color": "blue",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 41,
+        "name": "Thomas Alva Edison",
+        "shortname": "edison",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "purple",
+        "type": "siege"
+    },
+    {
+        "id": 42,
+        "name": "Erik the Red",
+        "shortname": "erikthered",
+        "rarity": "uncommon",
+        "class": "greatLeader",
+        "color": "red",
+        "type": "cavalry"
+    },
+    {
+        "id": 43,
+        "name": "Naya of the Cave Clan",
+        "shortname": "naya",
+        "rarity": "uncommon",
+        "class": "greatLeader",
+        "color": "green",
+        "type": "cavalry"
+    },
+    {
+        "id": 44,
+        "name": "Xueting Fuyu",
+        "shortname": "xueting",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "yellow",
+        "type": "infantry"
+    },
+    {
+        "id": 45,
+        "name": "Cuahtemoc",
+        "shortname": "cuahtemoc",
+        "rarity": "uncommon",
+        "class": "commander",
+        "color": "yellow",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 46,
+        "name": "Imhotep",
+        "shortname": "imhotep",
+        "rarity": "uncommon",
+        "class": "manipulator",
+        "color": "blue",
+        "type": "ranged"
+    },
+    {
+        "id": 47,
+        "name": "Ocelotl",
+        "shortname": "ocelotl",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "green",
+        "type": "infantry"
+    },
+    {
+        "id": 48,
+        "name": "Titus pollo",
+        "shortname": "titus",
+        "rarity": "uncommon",
+        "class": "commander",
+        "color": "purple",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 49,
+        "name": "Kandake of Nubia",
+        "shortname": "kandake",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "yellow",
+        "type": "infantry"
+    },
+    {
+        "id": 50,
+        "name": "Leonidas I",
+        "shortname": "leonidas",
+        "rarity": "rare",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 51,
+        "name": "Miyamoto Musashi",
+        "shortname": "musashi",
+        "rarity": "rare",
+        "class": "champion",
+        "color": "purple",
+        "type": "infantry"
+    },
+    {
+        "id": 52,
+        "name": "Freydis Eiriksdottir",
+        "shortname": "freydis",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 53,
+        "name": "Cyrus the Great",
+        "shortname": "cyrus",
+        "rarity": "rare",
+        "class": "commander",
+        "color": "red",
+        "type": "cavalry"
+    },
+    {
+        "id": 54,
+        "name": "Miltiades",
+        "shortname": "miltiades",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "red",
+        "type": "infantry"
+    },
+    {
+        "id": 55,
+        "name": "Attila the Hun",
+        "shortname": "attillathehun",
+        "rarity": "epic",
+        "class": "commander",
+        "color": "green",
+        "type": "cavalry"
+    },
+    {
+        "id": 56,
+        "name": "Hatshepsut",
+        "shortname": "hatshepsut",
+        "rarity": "epic",
+        "class": "greatLeader",
+        "color": "green",
+        "type": "cavalry"
+    },
+    {
+        "id": 57,
+        "name": "Louis XIV",
+        "shortname": "louisxiv",
+        "rarity": "epic",
+        "class": "greatLeader",
+        "color": "yellow",
+        "type": "cavalry"
+    },
+    {
+        "id": 58,
+        "name": "Margaret I of Denmark",
+        "shortname": "margaret",
+        "rarity": "epic",
+        "class": "greatLeader",
+        "color": "blue",
+        "type": "cavalry"
+    },
+    {
+        "id": 59,
+        "name": "Tiger Lily",
+        "shortname": "tigerlily",
+        "rarity": "epic",
+        "class": "greatLeader",
+        "color": "green",
+        "type": "cavalry"
+    },
+    {
+        "id": 60,
+        "name": "Pythagoras",
+        "shortname": "pythagoras",
+        "rarity": "rare",
+        "class": "greatLeader",
+        "color": "blue",
+        "type": "siege"
+    },
+    {
+        "id": 61,
+        "name": "Aemilia Tertia",
+        "shortname": "aemilia",
+        "rarity": "uncommon",
+        "class": "manipulator",
+        "color": "green",
+        "type": "ranged"
+    },
+    {
+        "id": 62,
+        "name": "Marco Polo",
+        "shortname": "marcopolo",
+        "rarity": "rare",
+        "class": "genius",
+        "color": "green",
+        "type": "siege"
+    },
+    {
+        "id": 63,
+        "name": "Hermann the Cheruscan",
+        "shortname": "hermann",
+        "rarity": "rare",
+        "class": "commander",
+        "color": "green",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 64,
+        "name": "Sitting Bull",
+        "shortname": "sittingbull",
+        "rarity": "uncommon",
+        "class": "greatLeader",
+        "color": "green",
+        "type": "cavalry"
+    },
+    {
+        "id": 65,
+        "name": "Ulysses S. Grant",
+        "shortname": "ulysses",
+        "rarity": "rare",
+        "class": "commander",
+        "color": "blue",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 66,
+        "name": "Mochizuki Chiyome",
+        "shortname": "mochizuki",
+        "rarity": "uncommon",
+        "class": "champion",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 67,
+        "name": "Oracle of Delphi",
+        "shortname": "oracleofdelphi",
+        "rarity": "rare",
+        "class": "manipulator",
+        "color": "purple",
+        "type": "ranged"
+    },
+    {
+        "id": 68,
+        "name": "Te Wherowhero",
+        "shortname": "wherowhero",
+        "rarity": "uncommon",
+        "class": "greatLeader",
+        "color": "blue",
+        "type": "cavalry"
+    },
+    {
+        "id": 69,
+        "name": "Queen Boudicca",
+        "shortname": "boudicca",
+        "rarity": "epic",
+        "class": "champion",
+        "color": "red",
+        "type": "ranged"
+    },
+    {
+        "id": 70,
+        "name": "William Tell",
+        "shortname": "williamtell",
+        "rarity": "rare",
+        "class": "champion",
+        "color": "blue",
+        "type": "ranged"
+    },
+    {
+        "id": 71,
+        "name": "John Locke",
+        "shortname": "johnlocke",
+        "rarity": "rare",
+        "class": "manipulator",
+        "color": "green",
+        "type": "ranged"
+    },
+    {
+        "id": 72,
+        "name": "Euclid",
+        "shortname": "euclid",
+        "rarity": "uncommon",
+        "class": "genius",
+        "color": "blue",
+        "type": "siege"
+    },
+    {
+        "id": 73,
+        "name": "Artemisia I of Caria",
+        "shortname": "artemisia",
+        "rarity": "rare",
+        "class": "champion",
+        "color": "green",
+        "type": "ranged"
+    },
+    {
+        "id": 74,
+        "name": "Plato",
+        "shortname": "plato",
+        "rarity": "epic",
+        "class": "manipulator",
+        "color": "blue",
+        "type": "ranged"
+    },
+    {
+        "id": 75,
+        "name": "Albert Einstein",
+        "shortname": "einstein",
+        "rarity": "legendary",
+        "class": "genius",
+        "color": "blue",
+        "type": "siege"
+    },
+    {
+        "id": 76,
+        "name": "Joan of Arc",
+        "shortname": "joanofarc",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "yellow",
+        "type": "heavyInfantry"
+    }
+]

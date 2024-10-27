@@ -1,0 +1,70 @@
+.herocard {
+    width: 100px;
+    height: 120px;
+    border: 2px solid #7d540d;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+
+    &::after {
+        box-shadow: inset 0px 0px 2px black;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    > img {
+        object-fit: contain;
+        border-radius: 8px;
+        align-self: flex-end;
+        max-height: 100%;
+    }
+
+    &.legendary {
+        background-image: linear-gradient(to top, var(--hero-legendary), var(--hero-legendary-complementary));
+        border-color: var(--hero-legendary);
+
+        &:not(.disabled):hover {
+            box-shadow: 0 0 5px 1px var(--hero-legendary);
+        }
+    }
+
+    &.epic {
+        background-image: linear-gradient(to top, var(--hero-epic), var(--hero-epic-complementary));
+        border-color: var(--hero-epic);
+
+        &:not(.disabled):hover {
+            box-shadow: 0 0 5px 1px var(--hero-epic);
+        }
+    }
+
+    &.rare {
+        background-image: linear-gradient(to top, var(--hero-rare), var(--hero-rare-complementary));
+        border-color: var(--hero-rare);
+
+        &:not(.disabled):hover {
+            box-shadow: 0 0 5px 1px var(--hero-rare);
+        }
+    }
+
+    &.uncommon {
+        background-image: linear-gradient(to top, var(--hero-uncommon), var(--hero-uncommon-complementary));
+        border-color: var(--hero-common);
+
+        &:not(.disabled):hover {
+            box-shadow: 0 0 5px 1px var(--hero-uncommon);
+        }
+    }
+
+    &.disabled {
+        filter: grayscale(1);
+    }
+}
+
+.hero-row {
+    width: min(860px, 90%);
+}

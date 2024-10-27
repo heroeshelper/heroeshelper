@@ -1,0 +1,13 @@
+:root {
+  --background: #f3e2ad;
+
+  /* Hero colours */
+  --hero-legendary: #c59138;
+  --hero-legendary-complementary: #936d33;
+  --hero-epic: #5c49b5;
+  --hero-epic-complementary: #473a8a;
+  --hero-rare: #4979b5;
+  --hero-rare-complementary: #3a5c8b;
+  --hero-uncommon: #789e5f;
+  --hero-uncommon-complementary: #5b784c;
+}
