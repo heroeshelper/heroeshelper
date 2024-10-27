@@ -14,7 +14,8 @@ body {
     }
 }
 
-a.active {
+a.active,
+a.disabled {
     pointer-events: none;
 
     .icon {

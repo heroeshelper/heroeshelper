@@ -1,6 +1,11 @@
 :root {
     --background: #f3e2ad;
 
+    --navigation-tile-background: #2f70a6;
+    --navigation-tile-background-hover: #1c496f;
+    --navigation-tile-border: #5391c3;
+    --navigation-tile-text: #fbf0ce;
+
     /* Hero colours */
     --hero-legendary: #c59138;
     --hero-legendary-complementary: #936d33;
