@@ -5,3 +5,20 @@
 body {
     font-family: "Open Sans", "Tahoma", sans-serif;
 }
+
+.icon {
+    color: var(--icon-color);
+
+    &:hover {
+        color: var(--icon-color-hover);
+    }
+}
+
+a.active,
+a.disabled {
+    pointer-events: none;
+
+    .icon {
+        color: var(--icon-color-disabled);
+    }
+}

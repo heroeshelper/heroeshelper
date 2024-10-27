@@ -1,0 +1,18 @@
+.navTile {
+    background-color: var(--navigation-tile-background);
+    border: 6px solid var(--navigation-tile-border);
+    border-radius: 50%;
+
+    .title {
+        color: var(--navigation-tile-text);
+        font-weight: bold;
+    }
+
+    &:hover {
+        background-color: var(--navigation-tile-background-hover);
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
