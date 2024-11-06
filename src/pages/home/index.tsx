@@ -1,4 +1,4 @@
-import NavigationTile from "@heroesplanner/shared/components/NavigationTile";
+import NavigationTile from "@heroeshelper/shared/components/NavigationTile";
 
 export default function Home() {
     return (

@@ -1,7 +1,7 @@
-import { useHeroes } from "@heroesplanner/shared/heroes";
-import HeroCard from "@heroesplanner/shared/heroes/HeroCard";
-import { Hero, Rarity } from "@heroesplanner/shared/heroes/types";
-import { isNil, isNotNil } from "@heroesplanner/utils/isNil";
+import { useHeroes } from "@heroeshelper/shared/heroes";
+import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
+import { Hero, Rarity } from "@heroeshelper/shared/heroes/types";
+import { isNil, isNotNil } from "@heroeshelper/utils/isNil";
 import { useCallback, useEffect, useState } from "react";
 import { generatePath, useParams } from "react-router-dom";
 

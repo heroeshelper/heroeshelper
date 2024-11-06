@@ -1,4 +1,4 @@
-import { getAssetUrl } from "@heroesplanner/utils/assets";
+import { getAssetUrl } from "@heroeshelper/utils/assets";
 import Image from "./Image";
 
 type Props = React.ComponentProps<"img"> & {
