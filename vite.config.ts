@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [react()],
     resolve: {
         alias: {
-            "@heroesplanner": path.resolve(__dirname, "./src"),
+            "@heroeshelper": path.resolve(__dirname, "./src"),
         },
     },
 });
