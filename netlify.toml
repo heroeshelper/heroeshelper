@@ -2,3 +2,6 @@
   from = "/*"
   to = "/"
   status = 200
+
+[[plugins]]
+  package = "/netlify/plugins/favicon-downloader"

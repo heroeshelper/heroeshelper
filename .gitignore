@@ -38,3 +38,7 @@ next-env.d.ts
 
 # custom
 /public/assets
+/public/favicon.ico
+
+# Local Netlify folder
+.netlify
