@@ -20,7 +20,7 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
             }`}
             onClick={onCardClick}
         >
-            {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.shortname} width={216} height={260} />}
+            {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
         </div>
     );
 };
