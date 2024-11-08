@@ -6,6 +6,7 @@
     .title {
         color: var(--navigation-tile-text);
         font-weight: bold;
+        text-shadow: 1px 2px 1px black;
     }
 
     &:hover {

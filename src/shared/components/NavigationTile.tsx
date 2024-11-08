@@ -13,9 +13,13 @@ type Props = {
 const NavigationTile = ({ icon, to, title, disabled }: Props) => {
     return (
         <Link to={to} className={`${disabled && "disabled"}`}>
-            <div className={`navTile h-36 w-36 flex flex-col items-center justify-center ${disabled && "disabled"} `}>
-                <AssetImage src={`/icons/${icon}.png`} className="max-h-20 max-w-20" alt={title} />
-                <span className="title max-w-20 text-center">{title}</span>
+            <div
+                className={`relative navTile h-36 w-36 flex flex-col items-center justify-center ${
+                    disabled && "disabled"
+                } `}
+            >
+                <AssetImage src={`/icons/${icon}.png`} className="max-h-20 max-w-20" alt={icon} />
+                <span className="title text-center absolute bottom-0 text-nowrap">{title}</span>
             </div>
         </Link>
     );
