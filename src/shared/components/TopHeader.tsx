@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const TopHeader = () => {
     return (
         <div className="h-8 flex items-center flex-grow-0 px-4 py-2">
-            <NavLink to="/">
+            <NavLink to="/" aria-label="Home">
                 <FontAwesomeIcon icon={faHouse} size="xl" className="icon"></FontAwesomeIcon>
             </NavLink>
         </div>
