@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://github.com/heroeshelper/heroeshelper",
   "scripts": {
     "dev": "vite",
     "build": "npx tsc -b && vite build",
