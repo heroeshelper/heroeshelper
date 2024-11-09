@@ -3,7 +3,6 @@
     height: 120px;
     border: 2px solid #7d540d;
     border-radius: 10px;
-    position: relative;
     display: flex;
 
     &::after {
@@ -62,6 +61,16 @@
 
     &.disabled {
         filter: grayscale(1);
+    }
+
+    .type-banner {
+        background: var(--hero-type-banner-background);
+        border-radius: 8px 0 5px 0;
+        padding: 4px 2px;
+
+        > img {
+            filter: var(--hero-type-banner-image-filter);
+        }
     }
 }
 

@@ -15,12 +15,17 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
 
     return (
         <div
-            className={`herocard ${hero && hero.rarity} ${!disabled && hero && onClick && "cursor-pointer"} ${
+            className={`relative herocard ${hero && hero.rarity} ${!disabled && hero && onClick && "cursor-pointer"} ${
                 disabled && "disabled"
             }`}
             onClick={onCardClick}
         >
             {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
+            {hero && (
+                <div className="type-banner absolute h-14 w-6 top-0 left-0 flex items-end">
+                    <AssetImage src={`/icons/heroes/${hero.type}.png`} />
+                </div>
+            )}
         </div>
     );
 };
