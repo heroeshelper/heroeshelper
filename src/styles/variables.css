@@ -22,6 +22,8 @@
     --hero-type-banner-image-filter: brightness(0) invert(11%) sepia(14%) saturate(2417%) hue-rotate(201deg)
         brightness(92%) contrast(95%);
 
+    --hero-name-text: #55440f;
+
     --hero-color-yellow: #ffaa00;
     --hero-color-purple: #7b3be8;
     --hero-color-blue: #479aff;

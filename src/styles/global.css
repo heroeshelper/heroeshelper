@@ -22,3 +22,7 @@ a.disabled {
         color: var(--icon-color-disabled);
     }
 }
+
+.roboto-slab {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}

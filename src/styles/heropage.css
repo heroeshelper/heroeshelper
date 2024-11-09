@@ -1,0 +1,7 @@
+.hero-name {
+    color: var(--hero-name-text);
+}
+
+.hero-info {
+    width: min(860px, 90%);
+}

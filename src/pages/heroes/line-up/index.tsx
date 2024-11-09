@@ -86,7 +86,7 @@ const HeroesLineup = () => {
     const uncommonHeroes = heroes.filter(x => x.rarity === Rarity.Uncommon);
 
     return (
-        <div className="flex flex-col items-center gap-2 mt-4 mb-8">
+        <div className="flex flex-col items-center gap-2 mt-4 mb-8 flex-grow">
             <div className="flex flex-row items-center gap-8">
                 <HeroCard hero={selectedHeroes[0]} onClick={deselectHero} />
                 <HeroCard hero={selectedHeroes[1]} onClick={deselectHero} />
