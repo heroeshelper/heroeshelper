@@ -23,8 +23,16 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
             {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
             {hero && (
                 <div className="type-banner absolute h-14 w-6 top-0 left-0 flex items-end">
-                    <AssetImage src={`/icons/heroes/${hero.type}.png`} />
+                    <AssetImage src={`/icons/heroes/types/${hero.type}.png`} />
                 </div>
+            )}
+            {hero && (
+                <>
+                    <div className={`color-banner absolute h-6 w-6 top-0 left-0 flex items-end ${hero.color}`}>
+                        <AssetImage src={`/icons/heroes/colors/${hero.color}.png`} />
+                    </div>
+                    <div className={`color-banner-triangle ${hero.color} absolute left-0 top-6 w-0 h-0`} />
+                </>
             )}
         </div>
     );
