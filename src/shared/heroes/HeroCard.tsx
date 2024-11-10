@@ -28,7 +28,7 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
             )}
             {hero && (
                 <>
-                    <div className={`color-banner absolute h-6 w-6 top-0 left-0 flex items-end ${hero.color}`}>
+                    <div className={`color-banner absolute h-6 w-6 top-0 left-0 flex flex-col items-end ${hero.color}`}>
                         <AssetImage src={`/icons/heroes/colors/${hero.color}.png`} />
                     </div>
                     <div className={`color-banner-triangle ${hero.color} absolute left-0 top-6 w-0 h-0`} />

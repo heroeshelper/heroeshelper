@@ -26,3 +26,11 @@ a.disabled {
 .roboto-slab {
     font-family: "Roboto Slab", "Times New Roman", serif;
 }
+
+.image-filter-blue {
+    filter: var(--hero-type-banner-image-filter);
+}
+
+.image-filter-brown {
+    filter: var(--type-banner-brown-filter);
+}

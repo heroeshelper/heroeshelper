@@ -5,3 +5,19 @@
 .hero-info {
     width: min(860px, 90%);
 }
+
+.type-and-class {
+    .class-banner {
+        background: var(--class-banner-background);
+        color: var(--class-banner-text);
+        border: 2px solid;
+        border-color: var(--class-banner-text);
+    }
+
+    .type-banner {
+        background: var(--type-banner-background);
+        color: var(--type-banner-text);
+        border: 2px solid;
+        border-color: var(--type-banner-text);
+    }
+}

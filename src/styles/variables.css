@@ -24,6 +24,14 @@
 
     --hero-name-text: #55440f;
 
+    --class-banner-background: #aba7c3;
+    --class-banner-text: #352242;
+    --type-banner-background: #d1c6a6;
+    --type-banner-text: #474531;
+
+    --type-banner-brown-filter: brightness(0) invert(25%) sepia(7%) saturate(1582%) hue-rotate(17deg) brightness(96%)
+        contrast(91%);
+
     --hero-color-yellow: #ffaa00;
     --hero-color-purple: #7b3be8;
     --hero-color-blue: #479aff;
