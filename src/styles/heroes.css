@@ -27,7 +27,7 @@
         background-image: linear-gradient(to top, var(--hero-legendary), var(--hero-legendary-complementary));
         border-color: var(--hero-legendary);
 
-        &:not(.disabled):hover {
+        &.interactive:not(.disabled):hover {
             box-shadow: 0 0 5px 1px var(--hero-legendary);
         }
     }
@@ -36,7 +36,7 @@
         background-image: linear-gradient(to top, var(--hero-epic), var(--hero-epic-complementary));
         border-color: var(--hero-epic);
 
-        &:not(.disabled):hover {
+        &.interactive:not(.disabled):hover {
             box-shadow: 0 0 5px 1px var(--hero-epic);
         }
     }
@@ -45,7 +45,7 @@
         background-image: linear-gradient(to top, var(--hero-rare), var(--hero-rare-complementary));
         border-color: var(--hero-rare);
 
-        &:not(.disabled):hover {
+        &.interactive:not(.disabled):hover {
             box-shadow: 0 0 5px 1px var(--hero-rare);
         }
     }
@@ -54,7 +54,7 @@
         background-image: linear-gradient(to top, var(--hero-uncommon), var(--hero-uncommon-complementary));
         border-color: var(--hero-common);
 
-        &:not(.disabled):hover {
+        &.interactive:not(.disabled):hover {
             box-shadow: 0 0 5px 1px var(--hero-uncommon);
         }
     }

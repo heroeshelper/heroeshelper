@@ -1,4 +1,19 @@
-import { HeroClass, HeroType } from "@heroeshelper/shared/heroes/types";
+import { HeroClass, HeroType, Rarity } from "./types";
+
+export const getStarCount = (rarity: Rarity) => {
+    switch (rarity) {
+        case Rarity.Uncommon:
+            return 2;
+        case Rarity.Rare:
+            return 3;
+        case Rarity.Epic:
+            return 4;
+        case Rarity.Legendary:
+            return 5;
+        default:
+            return 0;
+    }
+};
 
 export const getHeroTypeTranslation = (type: HeroType) => {
     switch (type) {

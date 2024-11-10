@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { Hero } from "./types";
 import AssetImage from "../components/AssetImage";
+import { isNotNil } from "@heroeshelper/utils/isNil";
 
 type Props = {
     hero: Hero | null;
@@ -15,9 +16,9 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
 
     return (
         <div
-            className={`relative herocard ${hero && hero.rarity} ${!disabled && hero && onClick && "cursor-pointer"} ${
-                disabled && "disabled"
-            }`}
+            className={`relative herocard ${isNotNil(onClick) && "interactive"} ${hero && hero.rarity} ${
+                !disabled && hero && onClick && "cursor-pointer"
+            } ${disabled && "disabled"}`}
             onClick={onCardClick}
         >
             {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
