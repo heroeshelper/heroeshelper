@@ -48,3 +48,15 @@ export const getHeroClassTranslation = (type: HeroClass) => {
             return "";
     }
 };
+
+export const getRarityArticle = (rarity: Rarity) => {
+    switch (rarity) {
+        case Rarity.Uncommon:
+        case Rarity.Epic:
+            return "an";
+        case Rarity.Rare:
+        case Rarity.Legendary:
+        default:
+            return "a";
+    }
+};

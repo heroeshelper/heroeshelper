@@ -1,8 +1,10 @@
+import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { useHeroes } from "@heroeshelper/shared/heroes";
 import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { Hero, Rarity } from "@heroeshelper/shared/heroes/types";
 import { isNil, isNotNil } from "@heroeshelper/utils/isNil";
 import { useCallback, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { generatePath, useParams } from "react-router-dom";
 
 const SAVE_SEPARATOR = "|";
@@ -33,6 +35,13 @@ const getSaveString = (heroes: (Hero | null)[]) => {
     const s = heroes.slice(0, lastHeroIndex + 1);
 
     return btoa(s.map(x => (isNil(x) ? "" : x.id)).join(SAVE_SEPARATOR)).replaceAll("=", "");
+};
+
+const generateDescription = (heroes: (Hero | null)[]) => {
+    const nonNullHeroes = heroes.filter(isNotNil);
+    if (nonNullHeroes.length === 0) return "Plan your hero line-up to conquer your next battle!";
+
+    return nonNullHeroes.map(x => x.name).join(", ");
 };
 
 const HeroesLineup = () => {
@@ -86,29 +95,35 @@ const HeroesLineup = () => {
     const uncommonHeroes = heroes.filter(x => x.rarity === Rarity.Uncommon);
 
     return (
-        <div className="flex flex-col items-center gap-2 mt-4 mb-8 flex-grow">
-            <div className="flex flex-row items-center gap-8">
-                <HeroCard hero={selectedHeroes[0]} onClick={deselectHero} />
-                <HeroCard hero={selectedHeroes[1]} onClick={deselectHero} />
-            </div>
-            <div className="flex flex-row items-center gap-8">
-                <HeroCard hero={selectedHeroes[2]} onClick={deselectHero} />
-                <HeroCard hero={selectedHeroes[3]} onClick={deselectHero} />
-                <HeroCard hero={selectedHeroes[4]} onClick={deselectHero} />
-            </div>
-            {[legendaryHeroes, epicHeroes, rareHeroes, uncommonHeroes].map((heroKind, index) => (
-                <div key={index} className="flex flex-row items-center gap-2 mt-6 hero-row flex-wrap">
-                    {heroKind.map(x => (
-                        <HeroCard
-                            key={x.shortname}
-                            hero={x}
-                            onClick={selectHero}
-                            disabled={selectedHeroes.includes(x)}
-                        />
-                    ))}
+        <>
+            <Helmet>
+                <title>{`Heroes line-up ${DIVIDER} ${SITE_TITLE}`}</title>
+                <meta name="description" content={generateDescription(selectedHeroes)} />
+            </Helmet>
+            <div className="flex flex-col items-center gap-2 mt-4 mb-8 flex-grow">
+                <div className="flex flex-row items-center gap-8">
+                    <HeroCard hero={selectedHeroes[0]} onClick={deselectHero} />
+                    <HeroCard hero={selectedHeroes[1]} onClick={deselectHero} />
                 </div>
-            ))}
-        </div>
+                <div className="flex flex-row items-center gap-8">
+                    <HeroCard hero={selectedHeroes[2]} onClick={deselectHero} />
+                    <HeroCard hero={selectedHeroes[3]} onClick={deselectHero} />
+                    <HeroCard hero={selectedHeroes[4]} onClick={deselectHero} />
+                </div>
+                {[legendaryHeroes, epicHeroes, rareHeroes, uncommonHeroes].map((heroKind, index) => (
+                    <div key={index} className="flex flex-row items-center gap-2 mt-6 hero-row flex-wrap">
+                        {heroKind.map(x => (
+                            <HeroCard
+                                key={x.shortname}
+                                hero={x}
+                                onClick={selectHero}
+                                disabled={selectedHeroes.includes(x)}
+                            />
+                        ))}
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 
