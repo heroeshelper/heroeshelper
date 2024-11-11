@@ -39,7 +39,7 @@ const getSaveString = (heroes: (Hero | null)[]) => {
 
 const generateDescription = (heroes: (Hero | null)[]) => {
     const nonNullHeroes = heroes.filter(isNotNil);
-    if (nonNullHeroes.length === 0) return "Plan your hero line-up to conquer your next battle!";
+    if (nonNullHeroes.length === 0) return "Plan your Heroes of History hero line-up to conquer your next battle!";
 
     return nonNullHeroes.map(x => x.name).join(", ");
 };

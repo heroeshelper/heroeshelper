@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { Hero } from "@heroeshelper/shared/heroes/types";
+import { getAssetUrl } from "@heroeshelper/utils/assets";
 
 const generateDescription = (hero: Hero) => {
     return `${hero.name} is ${getRarityArticle(hero.rarity)} ${hero.rarity} ${getStarCount(
@@ -31,6 +32,7 @@ const HeroPage = () => {
             <Helmet>
                 <title>{`${hero.name} ${DIVIDER} ${SITE_TITLE}`}</title>
                 <meta name="description" content={generateDescription(hero)} />
+                <meta property="og:image" content={getAssetUrl(`/heroes/${hero.shortname}.png`)} />
             </Helmet>
             <div className="flex flex-col items-center gap-2 mt-8 mb-8 flex-grow">
                 <div className="hero-info flex flex-col overflow-hidden">
