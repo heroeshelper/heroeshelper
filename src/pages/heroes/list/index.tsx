@@ -16,7 +16,7 @@ const HeroList = () => {
                 <title>{`Hero list | ${SITE_TITLE}`}</title>
                 <meta
                     name="description"
-                    content="Plan your Heroes of History city layout and hero line-up right here!"
+                    content="Wondering which heroes are available in Heroes of History? View them all here!"
                 />
             </Helmet>
             <div className="flex p-8 pb-20 sm:p-20 flex-grow justify-center">
