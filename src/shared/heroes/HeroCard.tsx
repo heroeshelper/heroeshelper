@@ -7,9 +7,10 @@ type Props = {
     hero: Hero | null;
     onClick?: (shortname: string) => void;
     disabled?: boolean;
+    className?: string;
 };
 
-const HeroCard = ({ hero, onClick, disabled }: Props) => {
+const HeroCard = ({ hero, onClick, disabled, className }: Props) => {
     const onCardClick = useCallback(() => {
         hero && onClick?.(hero.shortname);
     }, [hero, onClick]);
@@ -18,7 +19,7 @@ const HeroCard = ({ hero, onClick, disabled }: Props) => {
         <div
             className={`relative herocard ${isNotNil(onClick) && "interactive"} ${hero && hero.rarity} ${
                 !disabled && hero && onClick && "cursor-pointer"
-            } ${disabled && "disabled"}`}
+            } ${disabled && "disabled"} ${className}`}
             onClick={onCardClick}
         >
             {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
