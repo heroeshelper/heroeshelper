@@ -7,12 +7,15 @@ export default function Home() {
         <>
             <Helmet>
                 <title>{SITE_TITLE}</title>
-                <meta name="description" content="Plan your city layout and hero line-up right here!" />
+                <meta
+                    name="description"
+                    content="Plan your Heroes of History city layout and hero line-up right here!"
+                />
             </Helmet>
             <div className="flex items-center justify-center p-8 pb-20 sm:p-20 flex-grow">
                 <main className="flex flex-row gap-8 items-center justify-center flex-wrap">
                     <NavigationTile icon="house" to="/city" title="Coming soon" disabled />
-                    <NavigationTile icon="unit" to="/heroes/list" title="Coming soon" disabled />
+                    <NavigationTile icon="unit" to="/heroes/list" title="Hero list" />
                     <NavigationTile icon="battle" to="/heroes/line-up" title="Hero Line-up" />
                 </main>
             </div>

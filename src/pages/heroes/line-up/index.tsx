@@ -2,6 +2,7 @@ import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { useHeroes } from "@heroeshelper/shared/heroes";
 import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { Hero, Rarity } from "@heroeshelper/shared/heroes/types";
+import { getAssetUrl } from "@heroeshelper/utils/assets";
 import { isNil, isNotNil } from "@heroeshelper/utils/isNil";
 import { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -39,7 +40,7 @@ const getSaveString = (heroes: (Hero | null)[]) => {
 
 const generateDescription = (heroes: (Hero | null)[]) => {
     const nonNullHeroes = heroes.filter(isNotNil);
-    if (nonNullHeroes.length === 0) return "Plan your hero line-up to conquer your next battle!";
+    if (nonNullHeroes.length === 0) return "Plan your Heroes of History hero line-up to conquer your next battle!";
 
     return nonNullHeroes.map(x => x.name).join(", ");
 };
@@ -94,11 +95,16 @@ const HeroesLineup = () => {
     const rareHeroes = heroes.filter(x => x.rarity === Rarity.Rare);
     const uncommonHeroes = heroes.filter(x => x.rarity === Rarity.Uncommon);
 
+    const firstSelectedHero = selectedHeroes.find(x => x !== null);
+
     return (
         <>
             <Helmet>
                 <title>{`Heroes line-up ${DIVIDER} ${SITE_TITLE}`}</title>
                 <meta name="description" content={generateDescription(selectedHeroes)} />
+                {firstSelectedHero && (
+                    <meta property="og:image" content={getAssetUrl(`/heroes/${firstSelectedHero.shortname}.png`)} />
+                )}
             </Helmet>
             <div className="flex flex-col items-center gap-2 mt-4 mb-8 flex-grow">
                 <div className="flex flex-row items-center gap-8">

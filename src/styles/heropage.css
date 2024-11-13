@@ -1,5 +1,9 @@
 .hero-name {
     color: var(--hero-name-text);
+
+    a:hover {
+        opacity: 0.8;
+    }
 }
 
 .hero-info {
