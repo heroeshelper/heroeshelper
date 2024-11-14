@@ -18,6 +18,8 @@ a.active,
 a.disabled {
     pointer-events: none;
 
+    color: var(--icon-color-disabled);
+
     .icon {
         color: var(--icon-color-disabled);
     }
