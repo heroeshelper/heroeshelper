@@ -19,7 +19,7 @@ const HeroList = () => {
                     content="Wondering which heroes are available in Heroes of History? View them all here!"
                 />
             </Helmet>
-            <div className="flex p-8 pb-20 sm:p-20 flex-grow justify-center">
+            <div className="flex pb-20 flex-grow justify-center">
                 <div className="hero-row">
                     <table className="border-spacing-4">
                         {[Rarity.Legendary, Rarity.Epic, Rarity.Rare, Rarity.Uncommon].map(r => {

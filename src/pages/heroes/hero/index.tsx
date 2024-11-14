@@ -5,11 +5,12 @@ import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { getRarityArticle, getStarCount } from "@heroeshelper/shared/heroes/utils";
 import { isNil } from "@heroeshelper/utils/isNil";
 import { getHeroClassTranslation, getHeroTypeTranslation } from "@heroeshelper/shared/heroes/utils";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { Hero } from "@heroeshelper/shared/heroes/types";
 import { getAssetUrl } from "@heroeshelper/utils/assets";
+import BreadCrumb, { BreadCrumbPart } from "@heroeshelper/shared/components/BreadCrumb";
 
 const generateDescription = (hero: Hero) => {
     return `${hero.name} is ${getRarityArticle(hero.rarity)} ${hero.rarity} ${getStarCount(
@@ -19,6 +20,7 @@ const generateDescription = (hero: Hero) => {
 
 const HeroPage = () => {
     const heroes = useHeroes();
+    const { pathname } = useLocation();
 
     let { id } = useParams();
     id = id?.split("-")[0];
@@ -26,6 +28,11 @@ const HeroPage = () => {
     const hero = heroes.find(x => x.id.toString() === id);
 
     if (isNil(hero)) return NotFound();
+
+    const crumbs: BreadCrumbPart[] = [
+        { url: "/heroes/list", name: "Hero list", active: false },
+        { url: pathname, name: hero.name, active: true },
+    ];
 
     return (
         <>
@@ -35,7 +42,8 @@ const HeroPage = () => {
                 <meta property="og:image" content={getAssetUrl(`/heroes/${hero.shortname}.png`)} />
             </Helmet>
             <div className="flex flex-col items-center gap-2 mt-8 mb-8 flex-grow">
-                <div className="hero-info flex flex-col overflow-hidden">
+                <div className="hero-info flex flex-col overflow-hidden gap-4">
+                    <BreadCrumb parts={crumbs} />
                     <div className="main-info flex gap-4">
                         <div className="hero-card-holder">
                             <HeroCard hero={hero} />

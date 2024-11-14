@@ -4,6 +4,7 @@
     border: 2px solid #7d540d;
     border-radius: 10px;
     display: flex;
+    transition: all 150ms;
 
     &::after {
         box-shadow: inset 0px 0px 2px black;
