@@ -17,7 +17,7 @@
         border-radius: 8px;
     }
 
-    > img {
+    .hero-image {
         object-fit: contain;
         border-radius: 8px;
         align-self: flex-end;
@@ -68,10 +68,6 @@
         background: var(--hero-type-banner-background);
         border-radius: 8px 0 5px 0;
         padding: 4px 2px;
-
-        > img {
-            filter: var(--hero-type-banner-image-filter);
-        }
     }
 
     .color-banner {
