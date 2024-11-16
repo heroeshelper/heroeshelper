@@ -682,5 +682,32 @@
         "class": "commander",
         "color": "yellow",
         "type": "heavyInfantry"
+    },
+    {
+        "id": 77,
+        "name": "Lagertha",
+        "shortname": "lagertha",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "purple",
+        "type": "infantry"
+    },
+    {
+        "id": 78,
+        "name": "Ragnar Lodbrok",
+        "shortname": "ragnar",
+        "rarity": "legendary",
+        "class": "commander",
+        "color": "green",
+        "type": "heavyInfantry"
+    },
+    {
+        "id": 79,
+        "name": "Leif Erikson",
+        "shortname": "leiferikson",
+        "rarity": "epic",
+        "class": "manipulator",
+        "color": "blue",
+        "type": "ranged"
     }
 ]
