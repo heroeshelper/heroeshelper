@@ -18,14 +18,25 @@ const HeroCard = ({ hero, onClick, disabled, className }: Props) => {
     return (
         <div
             className={`relative herocard ${isNotNil(onClick) && "interactive"} ${hero && hero.rarity} ${
-                !disabled && hero && onClick && "cursor-pointer"
-            } ${disabled && "disabled"} ${className}`}
+                !disabled && hero && onClick ? "cursor-pointer" : ""
+            } ${disabled ? "disabled" : ""} ${className ?? ""}`}
             onClick={onCardClick}
         >
-            {hero && <AssetImage src={`/heroes/${hero.shortname}.png`} alt={hero.name} width={216} height={260} />}
+            {hero && (
+                <AssetImage
+                    src={`/heroes/${hero.shortname}.png`}
+                    alt={hero.name}
+                    width={216}
+                    height={260}
+                    className="hero-image"
+                />
+            )}
             {hero && (
                 <div className="type-banner absolute h-14 w-6 top-0 left-0 flex items-end">
-                    <AssetImage src={`/icons/heroes/types/${hero.type.toLowerCase()}.png`} />
+                    <AssetImage
+                        src={`/icons/heroes/types/${hero.type.toLowerCase()}.png`}
+                        className="image-filter-blue"
+                    />
                 </div>
             )}
             {hero && (

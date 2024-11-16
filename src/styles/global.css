@@ -36,3 +36,7 @@ a.disabled {
 .image-filter-brown {
     filter: var(--type-banner-brown-filter);
 }
+
+picture {
+    display: inherit;
+}
