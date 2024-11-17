@@ -1,5 +1,5 @@
 const Image = (props: React.ComponentProps<"img">) => {
-    const allowWebP = props.src?.endsWith(".png");
+    const allowWebP = import.meta.env.PROD && props.src?.endsWith(".png");
     return (
         <picture>
             {allowWebP && <source type="image/webp" srcSet={props.src?.replace(".png", ".webp")} />}

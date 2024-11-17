@@ -8,7 +8,7 @@ type Props = {
 };
 
 const HeroesProvider = ({ children }: Props) => {
-    const heroes = unitData as Hero[];
+    const heroes = (unitData as Hero[]).toSorted((a, b) => b.id - a.id);
 
     return <HeroesContext.Provider value={heroes}>{children}</HeroesContext.Provider>;
 };
