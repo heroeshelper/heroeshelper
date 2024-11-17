@@ -6,7 +6,8 @@
     --navigation-tile-border: #5391c3;
     --navigation-tile-text: #fbf0ce;
 
-    --footer-text: #55481f;
+    --link-text: #55481f;
+    --link-text-hover: #150b4b;
 
     /* Hero colours */
     --hero-legendary: #c59138;

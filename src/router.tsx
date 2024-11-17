@@ -5,6 +5,8 @@ import HeroesLineup from "./pages/heroes/line-up";
 import Layout from "./Layout";
 import HeroPage from "./pages/heroes/hero";
 import HeroList from "./pages/heroes/list";
+import AboutPage from "./pages/about";
+import CookiePage from "./pages/cookies";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
             {
                 path: "/hero/:id",
                 element: <HeroPage />,
+            },
+            {
+                path: "/about",
+                element: <AboutPage />,
+            },
+            {
+                path: "/cookies",
+                element: <CookiePage />,
             },
             {
                 path: "*",
