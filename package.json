@@ -6,10 +6,12 @@
   "homepage": "https://github.com/heroeshelper/heroeshelper",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run generate-sitemap",
     "build": "npx tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
