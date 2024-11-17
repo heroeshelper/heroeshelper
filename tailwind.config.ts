@@ -8,6 +8,9 @@ const config: Config = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
             },
+            listStyleType: {
+                disclosureClosed: "disclosure-closed",
+            },
         },
     },
     safelist: [{ pattern: /^cursor-/ }],

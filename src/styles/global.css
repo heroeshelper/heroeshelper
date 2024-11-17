@@ -40,3 +40,12 @@ a.disabled {
 picture {
     display: inherit;
 }
+
+a {
+    color: var(--link-text);
+    font-weight: bold;
+
+    &:hover {
+        color: var(--link-text-hover);
+    }
+}
