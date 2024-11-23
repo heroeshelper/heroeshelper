@@ -18,12 +18,17 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/heroes/line-up/:saveString?",
-                element: <HeroesLineup />,
-            },
-            {
-                path: "/heroes/list",
-                element: <HeroList />,
+                path: "heroes",
+                children: [
+                    {
+                        path: "line-up/:saveString?",
+                        element: <HeroesLineup />,
+                    },
+                    {
+                        path: "list",
+                        element: <HeroList />,
+                    },
+                ],
             },
             {
                 path: "/hero/:id",

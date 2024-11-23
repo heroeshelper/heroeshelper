@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Fragment } from "react/jsx-runtime";
 
 export type BreadCrumbPart = {
     url: string;
@@ -15,12 +16,12 @@ const BreadCrumb = ({ parts }: Props) => {
         <div className="flex flex-row gap-3 select-none">
             {parts.map((part, i) => {
                 return (
-                    <>
+                    <Fragment key={i}>
                         <NavLink to={part.url} className={part.active ? "active" : ""}>
                             {part.name}
                         </NavLink>
                         {i < parts.length - 1 && <span>/</span>}
-                    </>
+                    </Fragment>
                 );
             })}
         </div>
