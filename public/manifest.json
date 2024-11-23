@@ -1,0 +1,21 @@
+{
+    "short_name": "HeroesHelper",
+    "name": "Heroes Helper",
+    "description": "Information and tools for the online game Heroes of History",
+    "icons": [
+        {
+            "src": "/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#2f70a6",
+    "background_color": "#f3e2ad"
+}
