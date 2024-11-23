@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import Home from "./pages/home";
 import NotFound from "./pages/error/NotFound";
 import HeroesLineup from "./pages/heroes/line-up";

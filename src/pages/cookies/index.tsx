@@ -1,6 +1,6 @@
 import { SITE_TITLE } from "@heroeshelper/shared/constants";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const CookiePage = () => {
     return (

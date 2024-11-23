@@ -5,7 +5,7 @@ import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { Rarity } from "@heroeshelper/shared/heroes/types";
 import { getStarCount } from "@heroeshelper/shared/heroes/utils";
 import { Helmet } from "react-helmet-async";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 
 const HeroList = () => {
