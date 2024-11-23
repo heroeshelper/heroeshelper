@@ -38,7 +38,8 @@ next-env.d.ts
 
 # custom
 /public/assets
-/public/favicon.ico
+/public/favicon*
+/public/apple-touch*
 sitemap.txt
 
 # Local Netlify folder
