@@ -15,6 +15,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HeroesHelper</title>
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker.register("/serviceworker.js", { scope: "/" });
+                });
+            }
+        </script>
     </head>
     <body class="main">
         <noscript>Javascript needs to be enabled to view this site.</noscript>
