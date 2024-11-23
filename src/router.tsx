@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import Home from "./pages/home";
 import NotFound from "./pages/error/NotFound";
 import HeroesLineup from "./pages/heroes/line-up";
@@ -18,12 +18,17 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/heroes/line-up/:saveString?",
-                element: <HeroesLineup />,
-            },
-            {
-                path: "/heroes/list",
-                element: <HeroList />,
+                path: "heroes",
+                children: [
+                    {
+                        path: "line-up/:saveString?",
+                        element: <HeroesLineup />,
+                    },
+                    {
+                        path: "list",
+                        element: <HeroList />,
+                    },
+                ],
             },
             {
                 path: "/hero/:id",

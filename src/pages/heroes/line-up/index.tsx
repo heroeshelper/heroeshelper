@@ -6,7 +6,7 @@ import { getAssetUrl } from "@heroeshelper/utils/assets";
 import { isNil, isNotNil } from "@heroeshelper/utils/isNil";
 import { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { generatePath, useParams } from "react-router-dom";
+import { generatePath, useParams } from "react-router";
 
 const SAVE_SEPARATOR = "|";
 

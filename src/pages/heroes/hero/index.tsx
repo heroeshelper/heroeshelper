@@ -5,7 +5,7 @@ import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { getRarityArticle, getStarCount } from "@heroeshelper/shared/heroes/utils";
 import { isNil } from "@heroeshelper/utils/isNil";
 import { getHeroClassTranslation, getHeroTypeTranslation } from "@heroeshelper/shared/heroes/utils";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router";
 import { Helmet } from "react-helmet-async";
 import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { Hero } from "@heroeshelper/shared/heroes/types";

@@ -5,7 +5,8 @@ import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { Rarity } from "@heroeshelper/shared/heroes/types";
 import { getStarCount } from "@heroeshelper/shared/heroes/utils";
 import { Helmet } from "react-helmet-async";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
+import { Fragment } from "react/jsx-runtime";
 
 const HeroList = () => {
     const heroes = useHeroes();
@@ -25,7 +26,7 @@ const HeroList = () => {
                         {[Rarity.Legendary, Rarity.Epic, Rarity.Rare, Rarity.Uncommon].map(r => {
                             const currentRarity = heroes.filter(x => x.rarity === r);
                             return (
-                                <>
+                                <Fragment key={r}>
                                     <thead>
                                         <tr>
                                             <th colSpan={2} className="pt-8">
@@ -47,7 +48,7 @@ const HeroList = () => {
                                     </thead>
                                     <tbody>
                                         {currentRarity.map(h => (
-                                            <tr>
+                                            <tr key={h.shortname}>
                                                 <td>
                                                     <NavLink to={`/hero/${h.id}-${h.shortname}`}>
                                                         <HeroCard className="interactive" hero={h} />
@@ -59,7 +60,7 @@ const HeroList = () => {
                                             </tr>
                                         ))}
                                     </tbody>
-                                </>
+                                </Fragment>
                             );
                         })}
                     </table>
