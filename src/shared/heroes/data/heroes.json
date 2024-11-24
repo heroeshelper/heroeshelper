@@ -709,5 +709,23 @@
         "class": "manipulator",
         "color": "blue",
         "type": "ranged"
+    },
+    {
+        "id": 80,
+        "name": "Vlad Dracula",
+        "shortname": "dracula",
+        "rarity": "legendary",
+        "class": "champion",
+        "color": "purple",
+        "type": "infantry"
+    },
+    {
+        "id": 81,
+        "name": "Abraham van Helsing",
+        "shortname": "vanhelsing",
+        "rarity": "epic",
+        "class": "genius",
+        "color": "red",
+        "type": "ranged"
     }
 ]
