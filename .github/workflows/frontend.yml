@@ -14,11 +14,13 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version-file: ".nvmrc"
-                  cache: "npm"
-                  cache-dependency-path: "./package-lock.json"
+                  cache: "yarn"
 
-            - name: npm install, build, and test
-              run: |
-                  npm install
-                  npm run build --if-present
-                  npm run test --if-present
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
+
+            - name: Build software
+              run: yarn build
+
+            - name: Run tests
+              run: yarn test
