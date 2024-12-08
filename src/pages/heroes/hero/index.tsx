@@ -4,13 +4,15 @@ import { useHeroes } from "@heroeshelper/shared/heroes";
 import HeroCard from "@heroeshelper/shared/heroes/HeroCard";
 import { getRarityArticle, getStarCount } from "@heroeshelper/shared/heroes/utils";
 import { isNil } from "@heroeshelper/utils/isNil";
-import { getHeroClassTranslation, getHeroTypeTranslation } from "@heroeshelper/shared/heroes/utils";
+import { getHeroTypeTranslation } from "@heroeshelper/shared/heroes/utils";
 import { useLocation, useParams } from "react-router";
 import { Helmet } from "react-helmet-async";
 import { DIVIDER, SITE_TITLE } from "@heroeshelper/shared/constants";
 import { Hero } from "@heroeshelper/shared/heroes/types";
 import { getAssetUrl } from "@heroeshelper/utils/assets";
 import BreadCrumb, { BreadCrumbPart } from "@heroeshelper/shared/components/BreadCrumb";
+import HeroClassBanner from "@heroeshelper/shared/heroes/HeroClassBanner";
+import HeroTypeBanner from "@heroeshelper/shared/heroes/HeroTypeBanner";
 
 const generateDescription = (hero: Hero) => {
     return `${hero.name} is ${getRarityArticle(hero.rarity)} ${hero.rarity} ${getStarCount(
@@ -58,28 +60,8 @@ const HeroPage = () => {
                                 ))}
                             </div>
                             <div className="type-and-class flex flex-row gap-2 flex-wrap">
-                                <div className="class-banner flex items-center w-44 h-8 p-1 rounded">
-                                    <div className="image-holder flex-grow-0 flex items-center justify-center w-6 h-6">
-                                        <AssetImage
-                                            src={`/icons/heroes/classes/${hero.class.toLowerCase()}.png`}
-                                            className="max-h-full flex-grow-0 image-filter-blue"
-                                        />
-                                    </div>
-                                    <span className="flex-grow uppercase text-center">
-                                        {getHeroClassTranslation(hero.class)}
-                                    </span>
-                                </div>
-                                <div className="type-banner flex items-center w-44 h-8 p-1 rounded">
-                                    <div className="image-holder flex-grow-0 flex items-center justify-center w-6 h-6">
-                                        <AssetImage
-                                            src={`/icons/heroes/types/${hero.type.toLowerCase()}.png`}
-                                            className="max-h-full flex-grow-0 image-filter-brown"
-                                        />
-                                    </div>
-                                    <span className="flex-grow uppercase text-center">
-                                        {getHeroTypeTranslation(hero.type)}
-                                    </span>
-                                </div>
+                                <HeroClassBanner heroClass={hero.class} />
+                                <HeroTypeBanner heroType={hero.type} />
                             </div>
                         </div>
                     </div>
