@@ -1,4 +1,4 @@
-import { HeroClass, HeroType, Rarity } from "./types";
+import { Hero, HeroAbilityInformation, HeroClass, HeroType, Rarity } from "./types";
 
 export const getStarCount = (rarity: Rarity) => {
     switch (rarity) {
@@ -59,4 +59,52 @@ export const getRarityArticle = (rarity: Rarity) => {
         default:
             return "a";
     }
+};
+
+export const getMaxAbilityLevel = (rarity: Rarity) => {
+    switch (rarity) {
+        case Rarity.Legendary:
+            return 40;
+        case Rarity.Epic:
+            return 25;
+        case Rarity.Rare:
+            return 15;
+        case Rarity.Uncommon:
+            return 5;
+        default:
+            return 0;
+    }
+};
+
+const stringFormat = (formatString: string, replacementArray: (string | number)[]) => {
+    return formatString.replace(
+        /\{(\d+)\}/g, // Matches placeholders, e.g. '{1}'
+        function formatStringReplacer(_, placeholderIndex) {
+            placeholderIndex = Number(placeholderIndex);
+
+            if (placeholderIndex < 0 || placeholderIndex > replacementArray.length - 1) {
+                return placeholderIndex;
+            }
+
+            return replacementArray[placeholderIndex];
+        },
+    );
+};
+
+export const getAbilityInformation = (hero: Hero, level: number): HeroAbilityInformation => {
+    if (level < 0) throw new Error("Levels cannot be negative");
+
+    const description = hero.ability.descriptions
+        .filter(x => x.minLevel <= level)
+        .toSorted((a, b) => a.minLevel - b.minLevel)[0];
+
+    const abilityValues = hero.ability.values.map(x =>
+        Math.max(x.defaultValue + x.levelIncrease * (level - x.minLevel), x.maximum),
+    );
+
+    return {
+        shortname: hero.ability.shortname,
+        tags: description.tags,
+        description: stringFormat(description.text, abilityValues),
+    };
 };

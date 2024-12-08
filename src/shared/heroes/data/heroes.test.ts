@@ -1,10 +1,11 @@
 import unitData from "./heroes.json";
-import { HeroClass, HeroColor, HeroType, Rarity } from "../types";
+import { Hero, HeroClass, HeroColor, HeroType, Rarity } from "../types";
 import { describe, test, expect } from "vitest";
+import { getAbilityInformation, getMaxAbilityLevel } from "../utils";
 
 const heroes = unitData;
 
-describe.each(heroes)("Hero data", hero => {
+describe.each(heroes)("Hero data", (hero: Hero) => {
     test(`${hero.name} has a valid rarity`, () => {
         expect(Object.values(Rarity)).toContain(hero.rarity);
     });
@@ -27,5 +28,13 @@ describe.each(heroes)("Hero data", hero => {
 
     test(`${hero.name} has a unique shortname`, () => {
         expect(heroes.filter(x => x.shortname === hero.shortname).length).toEqual(1);
+    });
+
+    test(`${hero.name} has a unique ability shortname`, () => {
+        expect(heroes.filter(x => x.ability.shortname === hero.ability.shortname).length).toEqual(1);
+    });
+
+    test(`${hero.name} has a valid ability description`, () => {
+        for (let i = 1; i <= getMaxAbilityLevel(hero.rarity); i++) expect(getAbilityInformation(hero, i)).toBeTruthy();
     });
 });

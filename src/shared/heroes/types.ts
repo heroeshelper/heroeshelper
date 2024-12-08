@@ -6,6 +6,32 @@ export type Hero = {
     class: HeroClass;
     type: HeroType;
     color: HeroColor;
+    ability: HeroAbilityData;
+};
+
+type HeroAbilityData = {
+    shortname: string;
+    descriptions: HeroAbilityDescription[];
+    values: HeroAbilityValue[];
+};
+
+type HeroAbilityValue = {
+    defaultValue: number;
+    minLevel: number;
+    levelIncrease: number;
+    maximum: number;
+};
+
+type HeroAbilityDescription = {
+    text: string;
+    minLevel: number;
+    tags: HeroAbilityTag[];
+};
+
+export type HeroAbilityInformation = {
+    shortname: string;
+    description: string;
+    tags: HeroAbilityTag[];
 };
 
 export enum Rarity {
@@ -37,4 +63,8 @@ export enum HeroColor {
     Green = "green",
     Purple = "purple",
     Yellow = "yellow",
+}
+
+export enum HeroAbilityTag {
+    Buff = "buff",
 }
