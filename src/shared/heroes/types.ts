@@ -11,6 +11,7 @@ export type Hero = {
 
 type HeroAbilityData = {
     shortname: string;
+    name: string;
     descriptions: HeroAbilityDescription[];
     values: HeroAbilityValue[];
 };
@@ -29,6 +30,7 @@ type HeroAbilityDescription = {
 };
 
 export type HeroAbilityInformation = {
+    name: string;
     shortname: string;
     description: string;
     tags: HeroAbilityTag[];

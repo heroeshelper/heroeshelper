@@ -92,17 +92,18 @@ const stringFormat = (formatString: string, replacementArray: (string | number)[
 };
 
 export const getAbilityInformation = (hero: Hero, level: number): HeroAbilityInformation => {
-    if (level < 0) throw new Error("Levels cannot be negative");
+    if (level <= 0) throw new Error("Levels cannot be zero or lower");
 
     const description = hero.ability.descriptions
         .filter(x => x.minLevel <= level)
-        .toSorted((a, b) => a.minLevel - b.minLevel)[0];
+        .toSorted((a, b) => b.minLevel - a.minLevel)[0];
 
     const abilityValues = hero.ability.values.map(x =>
-        Math.max(x.defaultValue + x.levelIncrease * (level - x.minLevel), x.maximum),
+        Math.min(x.defaultValue + x.levelIncrease * (level - x.minLevel), x.maximum),
     );
 
     return {
+        name: hero.ability.name,
         shortname: hero.ability.shortname,
         tags: description.tags,
         description: stringFormat(description.text, abilityValues),
