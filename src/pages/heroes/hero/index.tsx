@@ -13,6 +13,7 @@ import { getAssetUrl } from "@heroeshelper/utils/assets";
 import BreadCrumb, { BreadCrumbPart } from "@heroeshelper/shared/components/BreadCrumb";
 import HeroClassBanner from "@heroeshelper/shared/heroes/HeroClassBanner";
 import HeroTypeBanner from "@heroeshelper/shared/heroes/HeroTypeBanner";
+import HeroAbility from "@heroeshelper/shared/heroes/HeroAbility";
 
 const generateDescription = (hero: Hero) => {
     return `${hero.name} is ${getRarityArticle(hero.rarity)} ${hero.rarity} ${getStarCount(
@@ -65,6 +66,7 @@ const HeroPage = () => {
                             </div>
                         </div>
                     </div>
+                    <HeroAbility hero={hero} />
                 </div>
             </div>
         </>

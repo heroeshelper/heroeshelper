@@ -470,13 +470,13 @@
             "name": "This is Sparta!",
             "descriptions": [
                 {
-                    "text": "Leonidas stomps the ground, dealing {0}% damage to all enemies within a range of 2.5.",
+                    "text": "Leonidas stomps the ground, dealing **{0}%** damage to all enemies within a range of **2.5**.",
                     "minLevel": 1,
                     "tags": ["stomp"]
                 },
                 {
-                    "text": "Leonidas stomps the ground, dealing {0}% damage to all enemies within a range of 2.5 and stunning his current target for 1 s.",
-                    "minLevel": 1,
+                    "text": "Leonidas stomps the ground, dealing **{0}%** damage to all enemies within a range of **2.5** and stunning his current target for **1s**.",
+                    "minLevel": 5,
                     "tags": ["stomp", "stun"]
                 }
             ],

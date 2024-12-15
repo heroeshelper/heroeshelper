@@ -118,3 +118,9 @@
 .hero-row {
     width: min(860px, 90%);
 }
+
+.hero-ability {
+    strong {
+        color: #1e40af;
+    }
+}
