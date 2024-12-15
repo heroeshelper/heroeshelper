@@ -19,6 +19,19 @@ const config: Config = {
         },
     },
     safelist: [{ pattern: /^cursor-/ }],
-    plugins: [nextui()],
+    plugins: [
+        nextui({
+            themes: {
+                light: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#0000ab",
+                            foreground: "#ffffff",
+                        },
+                    },
+                },
+            },
+        }),
+    ],
 };
 export default config;

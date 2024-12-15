@@ -24,12 +24,12 @@ const HeroAbility = ({ hero }: Props) => {
         <div className="flex flex-row gap-2">
             <div className="flex-shrink-0">
                 <AssetImage
-                    className="w-14 h-14"
+                    className="w-16 h-16"
                     src={`/icons/heroes/abilities/${hero.ability.shortname.toLowerCase()}.png`}
                 />
             </div>
             <div className="flex flex-col gap-3 w-full">
-                <div className="roboto-slab text-3xl">{hero.ability.name}</div>
+                <div className="roboto-slab text-3xl ability-name">{hero.ability.name}</div>
                 <Slider
                     label="Level"
                     minValue={1}
@@ -38,16 +38,20 @@ const HeroAbility = ({ hero }: Props) => {
                     step={1}
                     showTooltip
                     onChange={updateLevel}
+                    hideValue
                 />
-                <div className="flex flex-row gap-2 text-blue-800">
-                    {abilityInfo.tags.map((tag, i) => (
-                        <Fragment>
-                            <div className="text-2xl">{getHeroAbilityTagTranslation(tag)}</div>
-                            {i < abilityInfo.tags.length - 1 && (
-                                <Divider orientation="vertical" className="h-auto bg-blue-800" />
-                            )}
-                        </Fragment>
-                    ))}
+                <div className="flex flex-row justify-between">
+                    <div className="flex flex-row gap-2 text-primary">
+                        {abilityInfo.tags.map((tag, i) => (
+                            <Fragment key={tag}>
+                                <div className="text-2xl">{getHeroAbilityTagTranslation(tag)}</div>
+                                {i < abilityInfo.tags.length - 1 && (
+                                    <Divider orientation="vertical" className="h-auto bg-blue-800 border-primary" />
+                                )}
+                            </Fragment>
+                        ))}
+                    </div>
+                    <div className="text-2xl ability-name">{`Level ${currentLevel}`}</div>
                 </div>
                 <div className="hero-ability">
                     <Markdown>{abilityInfo.description}</Markdown>

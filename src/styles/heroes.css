@@ -121,6 +121,6 @@
 
 .hero-ability {
     strong {
-        color: #1e40af;
+        color: var(--color-primary);
     }
 }

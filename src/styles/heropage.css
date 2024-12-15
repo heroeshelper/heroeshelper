@@ -1,8 +1,24 @@
 .hero-name {
     color: var(--hero-name-text);
 
-    a:hover {
-        opacity: 0.8;
+    a {
+        color: var(--hero-name-text);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.ability-name {
+    color: var(--ability-name-text);
+
+    a {
+        color: var(--ability-name-text);
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 
