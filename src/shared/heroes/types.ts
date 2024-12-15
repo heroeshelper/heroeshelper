@@ -13,14 +13,12 @@ type HeroAbilityData = {
     shortname: string;
     name: string;
     descriptions: HeroAbilityDescription[];
-    values: HeroAbilityValue[];
+    abilityValues: HeroAbilityValue[];
 };
 
 type HeroAbilityValue = {
-    defaultValue: number;
+    values: number[];
     minLevel: number;
-    levelIncrease: number;
-    maximum: number;
 };
 
 type HeroAbilityDescription = {
@@ -69,4 +67,7 @@ export enum HeroColor {
 
 export enum HeroAbilityTag {
     Buff = "buff",
+    Stomp = "stomp",
+    Stun = "stun",
+    Heal = "heal",
 }

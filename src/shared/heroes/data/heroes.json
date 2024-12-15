@@ -384,7 +384,24 @@
         "rarity": "uncommon",
         "class": "greatLeader",
         "color": "green",
-        "type": "cavalry"
+        "type": "cavalry",
+        "ability": {
+            "shortname": "healingsalve",
+            "name": "Healing Salve",
+            "descriptions": [
+                {
+                    "text": "Applies a herbal concoction to the friendly unit with the most missing HP, healing them by {0}% of Naya's base damage. Prioritizes heroes.",
+                    "minLevel": 1,
+                    "tags": ["heal"]
+                }
+            ],
+            "abilityValues": [
+                {
+                    "values": [800, 822, 845, 869, 893],
+                    "minLevel": 1
+                }
+            ]
+        }
     },
     {
         "id": 44,
@@ -447,7 +464,32 @@
         "rarity": "rare",
         "class": "champion",
         "color": "red",
-        "type": "infantry"
+        "type": "infantry",
+        "ability": {
+            "shortname": "sparta",
+            "name": "This is Sparta!",
+            "descriptions": [
+                {
+                    "text": "Leonidas stomps the ground, dealing {0}% damage to all enemies within a range of 2.5.",
+                    "minLevel": 1,
+                    "tags": ["stomp"]
+                },
+                {
+                    "text": "Leonidas stomps the ground, dealing {0}% damage to all enemies within a range of 2.5 and stunning his current target for 1 s.",
+                    "minLevel": 1,
+                    "tags": ["stomp", "stun"]
+                }
+            ],
+            "abilityValues": [
+                {
+                    "values": [
+                        120, 122.2, 124.4, 126.6, 128.8, 131, 133.2, 135.4, 137.6, 139.8, 142, 144.2, 146.4, 148.6,
+                        150.8
+                    ],
+                    "minLevel": 1
+                }
+            ]
+        }
     },
     {
         "id": 51,

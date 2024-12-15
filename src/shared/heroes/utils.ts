@@ -98,8 +98,8 @@ export const getAbilityInformation = (hero: Hero, level: number): HeroAbilityInf
         .filter(x => x.minLevel <= level)
         .toSorted((a, b) => b.minLevel - a.minLevel)[0];
 
-    const abilityValues = hero.ability.values.map(x =>
-        Math.min(x.defaultValue + x.levelIncrease * (level - x.minLevel), x.maximum),
+    const abilityValues = hero.ability.abilityValues.map(
+        x => x.values[Math.max(0, Math.min(x.values.length - 1, level - x.minLevel))],
     );
 
     return {

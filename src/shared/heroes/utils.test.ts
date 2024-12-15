@@ -12,7 +12,7 @@ var hero1 = {
                 tags: ["test"],
             },
         ],
-        values: [{ defaultValue: 50, minLevel: 1, levelIncrease: 10, maximum: 120 }],
+        abilityValues: [{ values: [50, 60, 70, 80, 90, 100, 110, 120], minLevel: 1 }],
     },
 } as unknown as Hero;
 
@@ -31,7 +31,7 @@ var hero2 = {
                 tags: ["test"],
             },
         ],
-        values: [{ defaultValue: 50, minLevel: 1, levelIncrease: 10, maximum: 120 }],
+        abilityValues: [{ values: [50, 60, 70, 80, 90, 100, 110, 120], minLevel: 1 }],
     },
 } as unknown as Hero;
 
