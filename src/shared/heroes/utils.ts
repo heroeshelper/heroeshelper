@@ -35,7 +35,22 @@ export const getHeroClassTranslation = (type: HeroClass) => {
 };
 
 export const getHeroAbilityTagTranslation = (tag: HeroAbilityTag) => {
-    return capitalize(tag);
+    switch (tag) {
+        case HeroAbilityTag.AbilityBlock:
+            return "Ability Block";
+        case HeroAbilityTag.AreaStrike:
+            return "Area Strike";
+        case HeroAbilityTag.MeleeStrike:
+            return "Melee Strike";
+        case HeroAbilityTag.MindControl:
+            return "Mind Control";
+        case HeroAbilityTag.RangedStrike:
+            return "Ranged Strike";
+        case HeroAbilityTag.SoulLink:
+            return "Soul Link";
+        default:
+            return capitalize(tag);
+    }
 };
 
 export const getRarityArticle = (rarity: Rarity) => {

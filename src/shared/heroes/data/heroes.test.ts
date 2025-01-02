@@ -3,7 +3,7 @@ import { Hero, HeroAbilityTag, HeroClass, HeroColor, HeroType, Rarity } from "..
 import { describe, test, expect } from "vitest";
 import { getAbilityInformation, getMaxAbilityLevel } from "../utils";
 
-const heroes: Hero[] = unitData;
+const heroes = unitData as Hero[];
 
 describe.each(heroes)("$name data", hero => {
     const levels = [...Array(getMaxAbilityLevel(hero.rarity) + 1).keys()].slice(1);
@@ -34,6 +34,10 @@ describe.each(heroes)("$name data", hero => {
 
     test(`${hero.name} has a unique ability shortname`, () => {
         expect(heroes.filter(x => x.ability.shortname === hero.ability.shortname).length).toEqual(1);
+    });
+
+    test(`${hero.name} ability has different minimum level for each description`, () => {
+        expect(hero.ability.descriptions.length).toEqual(new Set(hero.ability.descriptions.map(f => f.minLevel)).size);
     });
 
     test.each(levels)(`${hero.name} has a valid ability description for level %d`, (level: number) => {
