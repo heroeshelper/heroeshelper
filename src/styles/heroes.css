@@ -53,7 +53,7 @@
 
     &.uncommon {
         background-image: linear-gradient(to top, var(--hero-uncommon), var(--hero-uncommon-complementary));
-        border-color: var(--hero-common);
+        border-color: var(--hero-uncommon);
 
         &.interactive:not(.disabled):hover {
             box-shadow: 0 0 5px 1px var(--hero-uncommon);
