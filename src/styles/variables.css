@@ -4,6 +4,9 @@
     --navigation-tile-border: #5391c3;
     --navigation-tile-text: #fbf0ce;
 
+    --color-primary: #0000ab;
+    --color-primary-highlight: #0092ab;
+
     --link-text: #55481f;
     --link-text-hover: #150b4b;
 
@@ -22,6 +25,7 @@
         brightness(92%) contrast(95%);
 
     --hero-name-text: #55440f;
+    --ability-name-text: #006f00;
 
     --class-banner-background: #aba7c3;
     --class-banner-text: #352242;

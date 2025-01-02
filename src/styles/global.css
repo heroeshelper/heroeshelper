@@ -38,10 +38,10 @@ picture {
 }
 
 a {
-    color: var(--link-text);
+    color: var(--color-primary);
     font-weight: bold;
 
     &:hover {
-        color: var(--link-text-hover);
+        color: var(--color-primary-highlight);
     }
 }

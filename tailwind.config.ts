@@ -1,7 +1,12 @@
 import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/react";
 
 const config: Config = {
-    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./index.html"],
+    content: [
+        "./src/**/*.{js,ts,jsx,tsx,mdx}",
+        "./index.html",
+        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
             colors: {
@@ -14,6 +19,19 @@ const config: Config = {
         },
     },
     safelist: [{ pattern: /^cursor-/ }],
-    plugins: [],
+    plugins: [
+        nextui({
+            themes: {
+                light: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#0000ab",
+                            foreground: "#ffffff",
+                        },
+                    },
+                },
+            },
+        }),
+    ],
 };
 export default config;
