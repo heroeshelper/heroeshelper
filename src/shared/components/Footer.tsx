@@ -13,7 +13,7 @@ const Footer = () => {
                 <NavLink to="/cookies">Cookie policy</NavLink>
             </div>
             <div className="flex gap-2">
-                <span>{packageJson.version}</span>
+                <NavLink to="/changelog">{packageJson.version}</NavLink>
                 <Divider />
                 <NavLink to={packageJson.homepage} target="_blank">
                     GitHub

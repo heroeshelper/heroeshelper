@@ -7,6 +7,7 @@ import HeroPage from "./pages/heroes/hero";
 import HeroList from "./pages/heroes/list";
 import AboutPage from "./pages/about";
 import CookiePage from "./pages/cookies";
+import ChangelogPage from "./pages/changelog";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "/cookies",
                 element: <CookiePage />,
+            },
+            {
+                path: "/changelog",
+                element: <ChangelogPage />,
             },
             {
                 path: "*",

@@ -1,15 +1,9 @@
-import fs from "node:fs"
+import fs from "node:fs";
 
 const file = "./public/sitemap.txt";
-const baseUrl = "https://heroeshelper.net"
+const baseUrl = "https://heroeshelper.net";
 
-const urls = [
-    "",
-    "/heroes/list",
-    "/heroes/line-up",
-    "/about",
-    "/cookies"
-]
+const urls = ["", "/heroes/list", "/heroes/line-up", "/about", "/cookies", "/changelog"];
 
 const heroes = JSON.parse(fs.readFileSync("./src/shared/heroes/data/heroes.json"));
 
